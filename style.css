@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Abel', sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -318,4 +319,55 @@ h3 {
   color:#697669;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  #name {
+    font-size: 3rem;
+  }
+  #overview {
+    font-size: 1rem;
+  }
+  #my-image {
+    width: 100px;
+  }
+  .social-media-btn-container > a {
+    font-size: 14px;
+  }
+  .section > .media {
+    flex-direction: column;
+  }
+  .section {
+    padding: 10px
+  }
+  .section > .media > img {
+    width: 80%;
+  }
+  .section > .media > .media-text {
+    width: 100%;
+    padding: 10px;
+    text-align: center
+  }
+  .contact-form {
+    padding: 0 10px;
+  }
+  .seperator {
+    height: 100px;
+  }
+  .modal-content > h1 {
+    font-size: 13px;
+  }
+  .contact-me {
+    padding: 20px 0;
+  }
+  .header-content {
+    left: 10px;
+    right: 10px;
+  }
+  .projects-container {
+    flex-wrap: wrap
+  }
+  .project > img {
+    width: 100px;
+  }
 }
