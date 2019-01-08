@@ -92,7 +92,7 @@ h3 {
   border-top: 1px solid #E6E0CB;
   margin-top: 0;
   margin-bottom: 1em;
-  padding: 0; 
+  padding: 0;
 }
 
 .social-media-btn-container {
@@ -160,7 +160,7 @@ h3 {
   border: 0;
   border-top: 1px solid #697669;
   margin: 1em 0;
-  padding: 0;  
+  padding: 0;
 }
 
 .section > p {
@@ -214,7 +214,7 @@ h3 {
 }
 
 .project > img {
-  width: 300px; 
+  width: 300px;
   border-radius: 4px;
   cursor: pointer;
   transition: .3s ease;
@@ -285,6 +285,21 @@ h3 {
 }
 /* valid color */
 .input-field input[type=text].valid {
+  border-bottom: 1px solid #697669 !important;
+  box-shadow: 0 1px 0 0 #697669 !important;
+}
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+  color: #697669 !important;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #697669 !important;
+  box-shadow: 0 1px 0 0 #697669 !important;
+}
+/* valid color */
+.input-field input[type=email].valid {
   border-bottom: 1px solid #697669 !important;
   box-shadow: 0 1px 0 0 #697669 !important;
 }
