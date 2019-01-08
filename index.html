@@ -9,11 +9,31 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Abdul Elah JS</title> 
+  <title>Abdul Elah JS</title>
 </head>
 <body>
 
   <div id="body"></div>
+
+  <div class="error-message">
+    <p>All Fields Are Required</p>
+  </div>
+
+  <div class="success-message">
+    <p>Sending Message ...</p>
+  </div>
+
+  <div class="spinner">
+    <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+  </div>
 
   <div id="nav-links-container">
     <hr id="hr-line" />
@@ -71,30 +91,38 @@
   <div id="projects" class="section">
     <h1>PROJECTS</h1>
     <hr />
-    <div class="projects-container">
-      <div class="project">
-        <img src="images/pulse.png" />
-        <a href="#" class="overlay modal-trigger">
-          <p><b>PULSE</b></p>
-        </a>
+    <div class="row">
+      <div class="col s6 m6 l6 xl3">
+        <div class="project">
+          <img src="images/pulse.png" class="img-responsive" />
+          <a href="#" class="overlay modal-trigger">
+            <p><b>PULSE</b></p>
+          </a>
+        </div>
       </div>
-      <div class="project">
-        <img src="images/dental.png" />
-        <a href="#" class="overlay modal-trigger">
-          <p><b>Dental Page</b></p>
-        </a>
+      <div class="col s6 m6 l6 xl3">
+        <div class="project">
+          <img src="images/dental.png" class="img-responsive" />
+          <a href="#" class="overlay modal-trigger">
+            <p><b>Dental Page</b></p>
+          </a>
+        </div>
       </div>
-      <div class="project">
-        <img src="images/waqood.png" />
-        <a href="#" class="overlay modal-trigger">
-          <p><b>WAQOOD</b></p>
-        </a>
+      <div class="col s6 m6 l6 xl3">
+        <div class="project">
+          <img src="images/waqood.png" class="img-responsive" />
+          <a href="#" class="overlay modal-trigger">
+            <p><b>WAQOOD</b></p>
+          </a>
+        </div>
       </div>
-      <div class="project">
-        <img src="images/labayh.png" />
-        <a href="#" class="overlay modal-trigger">
-          <p><b>LABAYH</b></p>
-        </a>
+      <div class="col s6 m6 l6 xl3">
+        <div class="project">
+          <img src="images/labayh.png" class="img-responsive" />
+          <a href="#" class="overlay modal-trigger">
+            <p><b>LABAYH</b></p>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -104,27 +132,27 @@
   <div id="contact" class="section">
     <h1>Contact Me</h1>
     <hr />
-    <div class="container contact-form">
+    <form id="contact-me" class="container contact-form">
       <br />
       <p>LETS TALK BUSINESS</p>
       <div class="input-field">
-        <input id="full_name" type="text" class="validate">
+        <input id="full_name" name="name" type="text" class="validate">
         <label for="full_name">Full Name</label>
       </div>
       <br />
       <div class="input-field">
-        <input id="email" type="email" class="validate">
+        <input id="email" name="email" type="email" class="validate">
         <label for="email">Email Address</label>
       </div>
       <br />
       <div class="input-field col s12">
-        <textarea id="textarea" class="materialize-textarea" data-length="200"></textarea>
-        <label for="textarea">Textarea</label>
+        <textarea id="textarea" name="message" class="materialize-textarea" data-length="200"></textarea>
+        <label for="textarea">Message</label>
       </div>
-      <button class="btn waves-effect waves-light submit-btn" type="submit" name="action">
+      <button class="btn waves-effect waves-light submit-btn" id="submit-form" type="submit" name="action">
         Submit
       </button>
-    </div>
+    </form>
   </div>
 
   <div class="contact-me">
@@ -146,5 +174,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="particles.js"></script>
   <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js" charset="utf-8"></script>
+  <script src="validate.js" charset="utf-8"></script>
 </body>
 </html>

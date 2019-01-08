@@ -41,4 +41,28 @@ window.onload = function () {
     $('#modal1').modal('open')
   })
 
+  $('#submit-form').click(function(e) {
+    e.preventDefault();
+    let name = $('#full_name').val();
+    let email = $('#email').val();
+    let message = $('#textarea').val();
+    if (!name || !email || !message) {
+      $('.error-message').animate({ right: '1%' }, 'slow')
+      setTimeout(() => {
+        $('.error-message').animate({ right: '-20%' })
+      }, 3000)
+    } else {
+      $('.success-message').animate({ right: '1%' }, 'slow');
+      setTimeout(() => {
+        $('.success-message p').text('Message Sent')
+        $('#full_name').val("")
+        $('#email').val("")
+        $('#textarea').val("")
+      }, 3000)
+      setTimeout(() => {
+        $('.success-message').animate({ right: '-20%' })
+      }, 6000)
+    }
+  })
+
 }
